@@ -1,0 +1,26 @@
+﻿@using WebSite.Data.Models
+@model IEnumerable<Cell>
+@{Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name =" viewport" content="width=device-width"/>
+    <title>HTML</title>
+</head>
+<body>
+<h2>Автомобили</h2>
+    @ViewBag.Category
+    @{ foreach (var item in Model)
+        {
+            <div>
+                <h3>Модель: @item.name</h3>
+                <p>Цена: @item.price</p>
+            </div>
+        }
+    }
+</body>
+
+</html>
